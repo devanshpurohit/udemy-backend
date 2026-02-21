@@ -40,7 +40,7 @@ connectDB();
 app.use(
   cors({
     origin: process.env.NODE_ENV === 'production' 
-      ? [ 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
+      ? ['https://udemy-frontend-oym9.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
       : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -75,7 +75,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 ======================= */
 app.use(cors({
     origin: process.env.NODE_ENV === 'production' 
-      ? ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
+      ? ['https://udemy-frontend-oym9.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
       : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -301,7 +301,7 @@ const server = app.listen(PORT, () => {
 const io = new Server(server, {
   cors: { 
     origin: process.env.NODE_ENV === 'production' 
-      ? [ 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
+      ? ['https://udemy-frontend-oym9.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'] 
       : ["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"],
     methods: ["GET", "POST"],
     credentials: true
